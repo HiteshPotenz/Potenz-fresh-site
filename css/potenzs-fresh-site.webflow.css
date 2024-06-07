@@ -790,6 +790,12 @@ figcaption {
   line-height: 26px;
 }
 
+.text-size-regular.text-weight-medium.text-color-drakgray.absolutee {
+  position: relative;
+  top: 57px;
+  left: -30px;
+}
+
 .text-weight-xbold {
   font-weight: 800;
 }
@@ -1254,6 +1260,7 @@ figcaption {
   background-color: #fae9ca;
   width: 100%;
   padding-top: 40px;
+  padding-bottom: 20px;
   position: relative;
   top: 0%;
   bottom: auto;
@@ -1503,14 +1510,14 @@ figcaption {
   color: #de5f28;
 }
 
-.hero_network-icon {
+.video-teaser-wrapper {
   justify-content: center;
   align-items: center;
   max-width: 25%;
   display: flex;
 }
 
-.hero_network-icon-wrap {
+.popup-toggle {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   flex-flow: column;
@@ -1533,7 +1540,7 @@ figcaption {
   grid-column-gap: 26px;
   grid-row-gap: 26px;
   opacity: .2;
-  margin-top: 75px;
+  margin-top: 150px;
   display: flex;
 }
 
@@ -2073,11 +2080,11 @@ figcaption {
 .popup_video-group {
   width: 100%;
   height: 100%;
+  margin-top: 155px;
   position: relative;
 }
 
 .is-magnetic {
-  z-index: 999;
   cursor: pointer;
   position: absolute;
 }
@@ -2091,6 +2098,16 @@ figcaption {
   width: 100px;
   height: 100px;
   display: flex;
+}
+
+.popup-wrapper {
+  z-index: 911;
+  display: none;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 .popup-inner {
@@ -2107,14 +2124,24 @@ figcaption {
 }
 
 .popup-close {
+  z-index: 999;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 999px;
   justify-content: center;
   align-items: center;
-  width: 3.5em;
-  height: 3.5em;
+  width: 3.2em;
+  height: 3.2em;
   display: flex;
+  position: absolute;
+  top: 100px;
+  bottom: auto;
+  left: auto;
+  right: 1em;
 }
 
 .popup-content-wrapper {
+  z-index: 998;
   justify-content: center;
   align-items: center;
   width: 90vw;
@@ -2122,13 +2149,41 @@ figcaption {
   height: 90vh;
   max-height: 675px;
   display: flex;
+  position: relative;
 }
 
 .popup-content {
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   margin: 0;
+  display: flex;
   overflow: hidden;
+}
+
+.popup-background {
+  background-color: rgba(0, 0, 0, .65);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.popup-video {
+  z-index: 998;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.popup-close-icon {
+  width: 1em;
+  height: 1em;
 }
 
 @media screen and (max-width: 991px) {
@@ -2938,6 +2993,11 @@ figcaption {
     font-weight: 700;
   }
 
+  .text-size-regular.text-weight-medium.text-color-drakgray.absolutee {
+    top: 13px;
+    left: -33px;
+  }
+
   .text-size-large.text-weight-semibold.text-color-black, .text-size-large.text-weight-semibold.text-color-black.is_private {
     letter-spacing: 0;
     font-size: 1.625rem;
@@ -3046,13 +3106,14 @@ figcaption {
     margin-top: 70px;
   }
 
-  .hero_network-icon {
+  .video-teaser-wrapper {
     width: 93px;
     height: 93px;
   }
 
-  .hero_network-icon-wrap {
+  .popup-toggle {
     margin-top: 40px;
+    left: 43%;
   }
 
   .hero_network-cta {
